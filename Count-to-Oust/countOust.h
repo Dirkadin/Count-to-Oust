@@ -18,7 +18,7 @@ typedef struct player {
 
 typedef struct list {
 	struct list* previous;
-	player* player;
+	player* data;
 	struct list* next;
 }*list;
 
