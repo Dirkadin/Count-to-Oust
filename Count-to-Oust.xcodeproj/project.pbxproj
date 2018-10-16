@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4380DD9B216FF0A8004A88D2 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 4380DD9A216FF0A8004A88D2 /* main.c */; };
+		43C84EAE217689670014960E /* gameMain.c in Sources */ = {isa = PBXBuildFile; fileRef = 43C84EA8217689670014960E /* gameMain.c */; };
+		43C84EAF217689670014960E /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 43C84EA9217689670014960E /* Makefile */; };
+		43C84EB0217689670014960E /* countOust.c in Sources */ = {isa = PBXBuildFile; fileRef = 43C84EAB217689670014960E /* countOust.c */; };
+		43C84EB1217689670014960E /* drLinkedList.c in Sources */ = {isa = PBXBuildFile; fileRef = 43C84EAC217689670014960E /* drLinkedList.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +27,12 @@
 
 /* Begin PBXFileReference section */
 		4380DD97216FF0A8004A88D2 /* Count-to-Oust */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Count-to-Oust"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4380DD9A216FF0A8004A88D2 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		43C84EA8217689670014960E /* gameMain.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gameMain.c; sourceTree = "<group>"; };
+		43C84EA9217689670014960E /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		43C84EAA217689670014960E /* countOust.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = countOust.h; sourceTree = "<group>"; };
+		43C84EAB217689670014960E /* countOust.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = countOust.c; sourceTree = "<group>"; };
+		43C84EAC217689670014960E /* drLinkedList.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = drLinkedList.c; sourceTree = "<group>"; };
+		43C84EAD217689670014960E /* drLinkedList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = drLinkedList.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +65,12 @@
 		4380DD99216FF0A8004A88D2 /* Count-to-Oust */ = {
 			isa = PBXGroup;
 			children = (
-				4380DD9A216FF0A8004A88D2 /* main.c */,
+				43C84EAB217689670014960E /* countOust.c */,
+				43C84EAA217689670014960E /* countOust.h */,
+				43C84EAC217689670014960E /* drLinkedList.c */,
+				43C84EAD217689670014960E /* drLinkedList.h */,
+				43C84EA8217689670014960E /* gameMain.c */,
+				43C84EA9217689670014960E /* Makefile */,
 			);
 			path = "Count-to-Oust";
 			sourceTree = "<group>";
@@ -118,7 +131,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4380DD9B216FF0A8004A88D2 /* main.c in Sources */,
+				43C84EB1217689670014960E /* drLinkedList.c in Sources */,
+				43C84EB0217689670014960E /* countOust.c in Sources */,
+				43C84EAF217689670014960E /* Makefile in Sources */,
+				43C84EAE217689670014960E /* gameMain.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
