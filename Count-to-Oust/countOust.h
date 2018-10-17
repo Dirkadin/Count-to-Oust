@@ -10,7 +10,7 @@
 #define countOust_h
 
 #include <stdio.h>
-#include "drLinkedList.h"
+#include "SinglyLinkedList.h"
 
 typedef struct player {
 	char* name;
@@ -21,16 +21,16 @@ typedef struct player {
 void createGameCircle(char *playersFile, int numOfPlayers);
 
 //Traverses forward in the list starting from the current player and prints the detailes of players, 10 players per line
-void traverseFwd(charList);
+void traverseFwd(void);
 
 //Inserts a new player at the specified position in the list, starting from the head
-void insertAt(charList, player);
+void insertAt(void);
 
 //Remove a player from the list while still keeping the list's links intact
 //void remove(player);
 
 //Traverses backward in the list starting from the current player
-void traverseBwd(charList);
+void traverseBwd(void);
 
 //Starts the game?
 void startGame(void);
