@@ -17,6 +17,13 @@ int main(int argc, const char * argv[]) {
 	head->next->val = 2;
 	head->next->next = NULL;
 	
+	node_t * current = head;
+	
+	while (current != NULL) {
+		printf("%d\n", current->val);
+		current = current->next;
+	}
+	
 	free(head->next);
 	free(head);
 	
