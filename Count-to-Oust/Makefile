@@ -6,7 +6,7 @@ client.x: gameMain.o countOust.o SinglyLinkedList.o
 countOust.o: countOust.c countOust.h
 	gcc -Wall -c countOust.c
 
-drLinkedList.o: SinglyLinkedList.c
+SinglyLinkedList.o: SinglyLinkedList.c SinglyLinkedList.h
 	gcc -Wall -c SinglyLinkedList.c
 
 gameMain.o: gameMain.c
