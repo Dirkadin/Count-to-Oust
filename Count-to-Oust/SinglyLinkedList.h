@@ -15,10 +15,10 @@
 typedef struct node {
 	int val;
 	struct node * next;
-} node_t;
+} node;
 
-void push(node_t * head, int val);
-int pop(node_t ** head);
-int removeNode(node_t ** head, int n);
+void push(node * head, int val);
+int pop(node ** head);
+int removeNode(node ** head, int n);
 
 #endif /* SinglyLinkedList_h */

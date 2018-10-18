@@ -8,21 +8,20 @@
 
 #include "SinglyLinkedList.h"
 
-void push(node_t * head, int val) {
-	node_t * current = head;
+void push(node * head, int val) {
+	node * current = head;
 	while (current->next != NULL) {
 		current = current->next;
 	}
 	
-	/* now we can add a new variable */
-	current->next = malloc(sizeof(node_t));
+	current->next = malloc(sizeof(node));
 	current->next->val = val;
 	current->next->next = NULL;
 }
 
-int pop(node_t ** head) {
+int pop(node ** head) {
 	int retval = -1;
-	node_t * next_node = NULL;
+	node * next_node = NULL;
 	
 	if (*head == NULL) {
 		return -1;
@@ -36,11 +35,11 @@ int pop(node_t ** head) {
 	return retval;
 }
 
-int removeNode(node_t ** head, int n) {
+int removeNode(node ** head, int n) {
 	int i = 0;
 	int retval = -1;
-	node_t * current = *head;
-	node_t * temp_node = NULL;
+	node * current = *head;
+	node * temp_node = NULL;
 	
 	if (n == 0) {
 		return pop(head);

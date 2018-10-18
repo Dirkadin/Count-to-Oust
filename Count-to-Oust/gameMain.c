@@ -10,14 +10,14 @@
 
 int main(int argc, const char * argv[]) {
 	
-	node_t * head = NULL;
-	head = malloc(sizeof(node_t));
+	node * head = NULL;
+	head = malloc(sizeof(node));
 	head->val = 1;
-	head->next = malloc(sizeof(node_t));
+	head->next = malloc(sizeof(node));
 	head->next->val = 2;
 	head->next->next = NULL;
 	
-	node_t * current = head;
+	node * current = head;
 	
 	while (current != NULL) {
 		printf("%d\n", current->val);
