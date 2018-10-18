@@ -12,12 +12,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct SinglyLinkedList {
-	int data;
-	struct SinglyLinkedList *next;
-}*SinglyLinkedList;
+typedef struct node {
+	int val;
+	struct node * next;
+} node_t;
 
-SinglyLinkedList push(SinglyLinkedList head, int value);
-SinglyLinkedList createSinglyLinkedList(void);
+void push(node_t * head, int val);
+int pop(node_t ** head);
+int removeNode(node_t ** head, int n);
 
 #endif /* SinglyLinkedList_h */

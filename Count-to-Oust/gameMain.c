@@ -10,6 +10,15 @@
 
 int main(int argc, const char * argv[]) {
 	
+	node_t * head = NULL;
+	head = malloc(sizeof(node_t));
+	head->val = 1;
+	head->next = malloc(sizeof(node_t));
+	head->next->val = 2;
+	head->next->next = NULL;
+	
+	free(head->next);
+	free(head);
 	
 	return 0;
 }
