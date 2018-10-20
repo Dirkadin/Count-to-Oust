@@ -10,22 +10,22 @@
 
 int main(int argc, const char * argv[]) {
 	
-	node * head = NULL;
-	head = malloc(sizeof(node));
+	node * head = { NULL };
+	head = malloc(sizeof(head));
+	head->next = NULL;
+	head->previous = NULL;
 	head->val = 1;
-	head->next = malloc(sizeof(node));
-	head->next->val = 2;
-	head->next->next = NULL;
 	
-	node * current = head;
+	push(head, 2);
+	push(head, 3);
+	push(head, 4);
+	push(head, 5);
 	
-	while (current != NULL) {
-		printf("%d\n", current->val);
-		current = current->next;
-	}
+	removeNode(&head, 2);
 	
-	free(head->next);
-	free(head);
+	
+//	free(head->next);
+//	free(head);
 	
 	return 0;
 }

@@ -12,16 +12,11 @@
 #include <stdio.h>
 #include "SinglyLinkedList.h"
 
-typedef struct player {
-	char* name;
-	char* number;
-}*player;
-
 //Creates the game circle (a doubly linked list)
 node createGameCircle(char *playersFile, int numOfPlayers);
 
 //Traverses forward in the list starting from the current player and prints the detailes of players, 10 players per line
-void traverseFwd(void);
+void traverseFwd(node);
 
 //Inserts a new player at the specified position in the list, starting from the head
 void insertAt(void);

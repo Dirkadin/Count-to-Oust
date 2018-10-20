@@ -12,13 +12,20 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+typedef struct player {
+	char* name;
+	char* number;
+} player;
+
 typedef struct node {
 	int val;
 	struct node * next;
+	struct node * previous;
 } node;
 
 void push(node * head, int val);
 int pop(node ** head);
 int removeNode(node ** head, int n);
+int insert(node * head, int index, player player);
 
 #endif /* SinglyLinkedList_h */

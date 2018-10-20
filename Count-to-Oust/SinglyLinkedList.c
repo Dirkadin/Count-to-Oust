@@ -17,6 +17,7 @@ void push(node * head, int val) {
 	current->next = malloc(sizeof(node));
 	current->next->val = val;
 	current->next->next = NULL;
+	current->next->previous = current;
 }
 
 int pop(node ** head) {
@@ -59,4 +60,8 @@ int removeNode(node ** head, int n) {
 	
 	return retval;
 	
+}
+
+int insertAt(node * head, int position, player player) {
+	return 0;
 }
