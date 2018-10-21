@@ -11,7 +11,7 @@
 
 #include <stdio.h>
 #include <string.h>
-#include "SinglyLinkedList.h"
+#include "DoublyLinkedList.h"
 
 //Creates the game circle (a doubly linked list)
 node createGameCircle(char *playersFile, int numOfPlayers);

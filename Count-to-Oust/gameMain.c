@@ -15,13 +15,6 @@ int main(int argc, const char * argv[]) {
 	head->next = NULL;
 	head->previous = NULL;
 	
-//	char str[5] = {'b','i','l','l','\0'};
-//	char *p = str;
-//	head->player.name = p;
-	
-//	char * str = "bill";
-//	head->player->name = str;
-	
 	head->player.name = "bill";
 	
 	head->player.number = 4;
@@ -32,7 +25,8 @@ int main(int argc, const char * argv[]) {
 	push(head, "billy", 3);
 	push(head, "mary", 4);
 	
-	removeNode(&head, 2);
+	player player = {"foo", 69};
+	insertNodeAt(head, 2, player);
 	
 	
 //	free(head->next);

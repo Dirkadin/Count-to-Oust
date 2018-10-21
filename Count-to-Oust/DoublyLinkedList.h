@@ -6,8 +6,8 @@
 //  Copyright © 2018 Dirk. All rights reserved.
 //
 
-#ifndef SinglyLinkedList_h
-#define SinglyLinkedList_h
+#ifndef DoublyLinkedList_h
+#define DoublyLinkedList_h
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -27,6 +27,6 @@ typedef struct node {
 void push(node * head, char* name, int number);
 player pop(node ** head);
 player removeNode(node ** head, int n);
-bool insertNodeAt(node * head, int index, player player);
+void insertNodeAt(node * head, int index, player player);
 
 #endif /* SinglyLinkedList_h */

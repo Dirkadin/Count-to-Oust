@@ -6,7 +6,7 @@
 //  Copyright © 2018 Dirk. All rights reserved.
 //
 
-#include "SinglyLinkedList.h"
+#include "DoublyLinkedList.h"
 
 void push(node * head, char* name, int number) {
 	node * current = head;
@@ -64,25 +64,18 @@ player removeNode(node ** head, int n) {
 	
 }
 
-bool insertNodeAt(node * head, int index, player player) {
-	
-	//get to correct spot
-	//make new node
-	//point now node to correct nodes
-	//point previous node's next to new node
-	//poin next nodes to new node
+void insertNodeAt(node * head, int index, player player) {
 	node * current = head;
 	for (int i = 0; i < index; i++) {
 		current = current->next;
 	}
 	
 	node* nextNode = malloc(sizeof(node));
-	nextNode->next = nextNode;
+	
+	nextNode->next = current->next;
 	current->next->previous = nextNode;
+	current->next = nextNode;
+	nextNode->previous = current;
+	nextNode->player = player;
 	
-	
-	
-	
-	
-	return true;
 }
