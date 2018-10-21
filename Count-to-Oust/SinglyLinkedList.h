@@ -19,7 +19,7 @@ typedef struct player {
 } player;
 
 typedef struct node {
-	player * player;
+	player player;
 	struct node * next;
 	struct node * previous;
 } node;

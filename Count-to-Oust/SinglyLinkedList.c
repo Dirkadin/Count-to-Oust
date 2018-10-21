@@ -15,11 +15,12 @@ void push(node * head, char* name, int number) {
 	}
 	
 	current->next = malloc(sizeof(node));
-	current->next->player->name = name;
-	current->next->player->number = number;
+	current->next->player.name = name;
+	current->next->player.number = number;
 	current->next->next = NULL;
 	current->next->previous = current;
 }
+
 //finish converting to player
 player pop(node ** head) {
 	player retval = {"null", -1};
@@ -30,7 +31,7 @@ player pop(node ** head) {
 	}
 	
 	next_node = (*head)->next;
-	retval = *(*head)->player;
+	retval = (*head)->player;
 	free(*head);
 	*head = next_node;
 	
@@ -55,7 +56,7 @@ player removeNode(node ** head, int n) {
 	}
 	
 	temp_node = current->next;
-	retval = *temp_node->player;
+	retval = temp_node->player;
 	current->next = temp_node->next;
 	free(temp_node);
 	
