@@ -14,14 +14,25 @@ int main(int argc, const char * argv[]) {
 	head = malloc(sizeof(head));
 	head->next = NULL;
 	head->previous = NULL;
-	head->val = 1;
 	
-	push(head, 2);
-	push(head, 3);
-	push(head, 4);
-	push(head, 5);
+	char str[5] = {'b','i','l','l','\0'};
+	char *p = str;
+	head->player->name = p;
 	
-	removeNode(&head, 2);
+//	char * str = "bill";
+//	head->player->name = str;
+	
+//	head->player->name = "bill";
+	
+	head->player->number = 4;
+	
+	
+	push(head, "bob", 1);
+	push(head, "sue", 2);
+	push(head, "billy", 3);
+	push(head, "mary", 4);
+	
+//	removeNode(&head, 2);
 	
 	
 //	free(head->next);

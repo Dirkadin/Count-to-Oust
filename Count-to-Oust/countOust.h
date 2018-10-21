@@ -10,6 +10,7 @@
 #define countOust_h
 
 #include <stdio.h>
+#include <string.h>
 #include "SinglyLinkedList.h"
 
 //Creates the game circle (a doubly linked list)
