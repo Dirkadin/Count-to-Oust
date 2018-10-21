@@ -8,6 +8,7 @@
 
 #include "DoublyLinkedList.h"
 
+//Pushes a node to the END of the list
 void push(node * head, char* name, int number) {
 	node * current = head;
 	while (current->next != NULL) {
@@ -21,7 +22,7 @@ void push(node * head, char* name, int number) {
 	current->next->previous = current;
 }
 
-//finish converting to player
+//Removes the first item in the list
 player pop(node ** head) {
 	player retval = {"null", -1};
 	node * next_node = NULL;
@@ -38,17 +39,18 @@ player pop(node ** head) {
 	return retval;
 }
 
-player removeNode(node ** head, int n) {
+//Removes a node at a SPECIFIC index
+player removeNode(node ** head, int index) {
 	int i = 0;
 	player retval = {"null", -1};
 	node * current = *head;
 	node * temp_node = NULL;
 	
-	if (n == 0) {
+	if (index == 0) {
 		return pop(head);
 	}
 	
-	for (i = 0; i < n-1; i++) {
+	for (i = 0; i < index-1; i++) {
 		if (current->next == NULL) {
 			return retval;
 		}
@@ -64,6 +66,7 @@ player removeNode(node ** head, int n) {
 	
 }
 
+//Inserts a node at a SPECIFIC index
 void insertNodeAt(node * head, int index, player player) {
 	node * current = head;
 	for (int i = 0; i < index; i++) {
