@@ -86,12 +86,11 @@ void insertNodeAt(node * head, int index, player player) {
 	
 }
 
-node* newNode(char name[100], int number) {
-	node* newNode = malloc(sizeof(newNode));
+node* newNode(char* name, int number) {
+	node* newNode = malloc(sizeof(node));
 	newNode->next = NULL;
 	newNode->previous = NULL;
 	newNode->player.name = name;
-//	strcpy(newNode->player.name, name);
 	newNode->player.number = number;
 	
 	return newNode;
