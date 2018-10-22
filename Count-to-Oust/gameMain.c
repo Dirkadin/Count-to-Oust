@@ -1,5 +1,5 @@
 //
-//  main.c
+//  gameMain.c
 //  Count-to-Oust
 //
 //  Created by Dirk on 10/11/18.
@@ -15,6 +15,7 @@ int main(int argc, const char * argv[]) {
 	FILE* filePtr;
 	int i = 0;
 	char temp[100][100];
+	
 	
 	printf("Welcome to Count-To-Oust!\nPlease enter the filename with your players: ");
 	scanf("%s", str);
@@ -34,10 +35,8 @@ int main(int argc, const char * argv[]) {
 	
 	numOfPlayers = i/2;
 	
-	printf("%s %s", temp[0], temp[1]);
 	node * head = createGameCircle(str, numOfPlayers);
-	
-	
+	traverseList(head, numOfPlayers);
 	
 	
 //	free(head->next);

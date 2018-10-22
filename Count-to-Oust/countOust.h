@@ -28,6 +28,9 @@ void insertAt(void);
 //Traverses backward in the list starting from the current player
 void traverseBwd(void);
 
+//Prints out all of the names and numsers in a list, 10 per line
+void traverseList(node*, int);
+
 //Starts the game?
 void startGame(void);
 

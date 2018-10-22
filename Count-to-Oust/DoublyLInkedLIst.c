@@ -27,7 +27,7 @@ node * push(node * head, char* name, int number) {
 
 //Removes the first item in the list
 player pop(node ** head) {
-	player retval = {"null", -1};
+	player retval = {NULL};
 	node * next_node = NULL;
 	
 	if (*head == NULL) {
@@ -45,7 +45,7 @@ player pop(node ** head) {
 //Removes a node at a SPECIFIC index
 player removeNode(node ** head, int index) {
 	int i = 0;
-	player retval = {"null", -1};
+	player retval = {NULL};
 	node * current = *head;
 	node * temp_node = NULL;
 	
@@ -91,6 +91,7 @@ node* newNode(char name[100], int number) {
 	newNode->next = NULL;
 	newNode->previous = NULL;
 	newNode->player.name = name;
+//	strcpy(newNode->player.name, name);
 	newNode->player.number = number;
 	
 	return newNode;

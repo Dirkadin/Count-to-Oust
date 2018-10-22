@@ -47,3 +47,19 @@ node* createGameCircle(char *playerFile, int numOfPlayers) {
 	
 	return head;
 }
+
+void traverseList(node* head, int numOfPlayers) {
+	int i;
+	node* current;
+	current = head;
+	
+	while (current->next != NULL) {
+		for (i = 0; i < numOfPlayers; i++) {
+			printf("Player %d: %s %d,", i, (void*)current->player.name, current->player.number);
+			if (i % 10 == 0 && i > 0) {
+				printf("\n");
+			}
+			current = current->next;
+		}
+	}
+}
