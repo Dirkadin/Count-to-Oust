@@ -27,19 +27,6 @@ node* createGameCircle(char *playerFile, int numOfPlayers) {
 			} else {
 				push(head, temp[i], playerNum);
 			}
-			
-			
-//			nextNode = newNode(temp[i], num);
-//
-//			current = head;
-//
-//			if (current->next != NULL) {
-//				current = current->next;
-//			}
-//
-//			current->next = nextNode;
-//			tail = nextNode;
-//			nextNode->previous = current->next;
 		}
 	}
 	
@@ -48,6 +35,7 @@ node* createGameCircle(char *playerFile, int numOfPlayers) {
 	return head;
 }
 
+//Moves through the list and prints 10 players per line
 void traverseList(node* head, int numOfPlayers) {
 	int i;
 	node* current;
