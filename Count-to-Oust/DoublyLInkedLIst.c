@@ -9,8 +9,9 @@
 #include "DoublyLinkedList.h"
 
 //Pushes a node to the END of the list
-void push(node * head, char* name, int number) {
-	node * current = head;
+node * push(node * head, char* name, int number) {
+	node * current = malloc(sizeof(current));
+	current = head;
 	while (current->next != NULL) {
 		current = current->next;
 	}
@@ -20,6 +21,8 @@ void push(node * head, char* name, int number) {
 	current->next->player.number = number;
 	current->next->next = NULL;
 	current->next->previous = current;
+	
+	return current;
 }
 
 //Removes the first item in the list
@@ -81,4 +84,14 @@ void insertNodeAt(node * head, int index, player player) {
 	nextNode->previous = current;
 	nextNode->player = player;
 	
+}
+
+node* newNode(char name[100], int number) {
+	node* newNode = malloc(sizeof(newNode));
+	newNode->next = NULL;
+	newNode->previous = NULL;
+	newNode->player.name = name;
+	newNode->player.number = number;
+	
+	return newNode;
 }

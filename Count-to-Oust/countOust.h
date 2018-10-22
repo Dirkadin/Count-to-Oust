@@ -14,7 +14,7 @@
 #include "DoublyLinkedList.h"
 
 //Creates the game circle (a doubly linked list)
-node createGameCircle(char *playersFile, int numOfPlayers);
+node* createGameCircle(char *playersFile, int numOfPlayers);
 
 //Traverses forward in the list starting from the current player and prints the detailes of players, 10 players per line
 void traverseFwd(node);

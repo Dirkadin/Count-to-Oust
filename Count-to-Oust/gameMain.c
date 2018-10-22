@@ -10,23 +10,34 @@
 
 int main(int argc, const char * argv[]) {
 	
-	node * head = { NULL };
-	head = malloc(sizeof(head));
-	head->next = NULL;
-	head->previous = NULL;
+	char str[20];
+	int numOfPlayers;
+	FILE* filePtr;
+	int i = 0;
+	char temp[100][100];
 	
-	head->player.name = "bill";
+	printf("Welcome to Count-To-Oust!\nPlease enter the filename with your players: ");
+	scanf("%s", str);
 	
-	head->player.number = 4;
+	filePtr = fopen(str, "r");
+//	filePtr = fopen("players.txt", "r");
+	if (filePtr == NULL) {
+		perror("Error");
+		exit(-1);
+	} else {
+		while ((fscanf(filePtr, "%sn", temp[i])) != EOF) {
+			i++;
+		}
+	}
+	
+	fclose(filePtr);
+	
+	numOfPlayers = i/2;
+	
+	printf("%s %s", temp[0], temp[1]);
+	node * head = createGameCircle(str, numOfPlayers);
 	
 	
-	push(head, "bob", 1);
-	push(head, "sue", 2);
-	push(head, "billy", 3);
-	push(head, "mary", 4);
-	
-	player player = {"foo", 69};
-	insertNodeAt(head, 2, player);
 	
 	
 //	free(head->next);
