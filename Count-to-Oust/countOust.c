@@ -64,3 +64,7 @@ player traverseFwd(node* head, int elimCount, int numOfPlayers) {
 	
 	return removed;
 }
+
+void traverseBwd(node* head, int elimCount, int numOfPlayers) {
+	
+}

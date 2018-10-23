@@ -74,7 +74,7 @@ int main(int argc, const char * argv[]) {
 		}
 		
 	} else {
-//		traverseBwd(head, elimCount, numOfPlayers);
+		traverseBwd(head, elimCount, numOfPlayers);
 	}
 	
 	
