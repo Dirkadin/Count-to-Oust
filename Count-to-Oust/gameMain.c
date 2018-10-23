@@ -58,8 +58,6 @@ int main(int argc, const char * argv[]) {
 	printf("\n Forwards: 0 or Backwards: 1?");
 	scanf("%d", &direction);
 	
-	printf("Starting the game.\n");
-	
 	if (direction == 0) {
 		while (numOfPlayers > 0) {
 			if (numOfPlayers < elimCount) {

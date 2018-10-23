@@ -52,7 +52,7 @@ void traverseList(node* head, int numOfPlayers) {
 		}
 }
 
-player traverseFwd(node* head, int elimCount, int numOfPlayers) {
+void traverseFwd(node* head, int elimCount, int numOfPlayers) {
 	
 	player removed = removeNode(&head, elimCount - 1);
 	
@@ -62,9 +62,29 @@ player traverseFwd(node* head, int elimCount, int numOfPlayers) {
 	
 	printf("\n\nPlayer %s was ELIMINIATED.  Btw they had a %d on their shirt.\n\n", removed.name, removed.number);
 	
-	return removed;
 }
 
 void traverseBwd(node* head, int elimCount, int numOfPlayers) {
+//	player removed = removeNode(&head, -elimCount - 1);
 	
+	for (int i = 0; i < elimCount; i++) {
+		head = head->previous;
+	}
+	
+	player removed = removeNode(&head, 0);
+	
+	printf("\n\nPlayer %s was ELIMINIATED.  Btw they had a %d on their shirt.\n\n", removed.name, removed.number);
+	
+}
+
+void insertAt(node* head, int index, player player) {
+	insertNodeAt(head, index, player);
+}
+
+void removePlayer(player player) {
+	remove(player.name);
+}
+
+void startGame() {
+	printf("Starting the game.\n");
 }
