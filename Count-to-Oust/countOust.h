@@ -17,7 +17,7 @@
 node* createGameCircle(char *playersFile, int numOfPlayers);
 
 //Traverses forward in the list starting from the current player and prints the detailes of players, 10 players per line
-void traverseFwd(node);
+void traverseFwd(node*);
 
 //Inserts a new player at the specified position in the list, starting from the head
 void insertAt(void);
@@ -26,7 +26,7 @@ void insertAt(void);
 //void remove(player);
 
 //Traverses backward in the list starting from the current player
-void traverseBwd(void);
+void traverseBwd(node*);
 
 //Prints out all of the names and numsers in a list, 10 per line
 void traverseList(node*, int);

@@ -9,20 +9,18 @@
 #include "DoublyLinkedList.h"
 
 //Pushes a node to the END of the list
-node * push(node * head, char* name, int number) {
-	node * current = malloc(sizeof(current));
-	current = head;
+void push(node * head, char* name, int number) {
+	node * current = head;
 	while (current->next != NULL) {
 		current = current->next;
 	}
 	
+	/* now we can add a new variable */
 	current->next = malloc(sizeof(node));
 	current->next->player.name = name;
 	current->next->player.number = number;
 	current->next->next = NULL;
 	current->next->previous = current;
-	
-	return current;
 }
 
 //Removes the first item in the list
@@ -92,6 +90,6 @@ node* newNode(char* name, int number) {
 	newNode->previous = NULL;
 	newNode->player.name = name;
 	newNode->player.number = number;
-	
+
 	return newNode;
 }

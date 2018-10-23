@@ -11,23 +11,23 @@
 node* createGameCircle(char *playerFile, int numOfPlayers) {
 	node* head = NULL;
 	FILE* filePtr;
-	char temp[30][100];
-	int playerNum;
+	char temp[200][30];
+	int i = 0;
 	
 	filePtr = fopen(playerFile, "r");
 	if (filePtr == NULL) {
 		perror("Error");
 		exit(-1);
 	} else {
-		for (int i = 0; i < numOfPlayers; i++) {
-			fscanf(filePtr, "%30s  %d", temp[i], &playerNum);
-			
-			if (head == NULL) {
-				head = newNode(temp[i], playerNum);
-			} else {
-				push(head, temp[i], playerNum);
-			}
+		while ((fscanf(filePtr, "%s  \n", temp[i])) != EOF) {
+			i++;
 		}
+	}
+	
+	head = newNode(temp[0], (int)atol(temp[1]));
+	
+	for (i = 2; i<numOfPlayers*2; i += 2) {
+		push(head, temp[i], (int)atol(temp[i + 1]));
 	}
 	
 	fclose(filePtr);
@@ -43,10 +43,12 @@ void traverseList(node* head, int numOfPlayers) {
 	
 	while (current->next != NULL) {
 		for (i = 0; i < numOfPlayers; i++) {
-			printf("Player %d: %s %d,", i, (void*)current->player.name, current->player.number);
 			if (i % 10 == 0 && i > 0) {
 				printf("\n");
 			}
+			
+			printf("Player %d: %s %d,", i+1, (void*)current->player.name, current->player.number);
+			
 			current = current->next;
 		}
 	}

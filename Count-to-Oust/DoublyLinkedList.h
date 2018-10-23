@@ -25,7 +25,7 @@ typedef struct node {
 	struct node * previous;
 } node;
 
-node * push(node * head, char* name, int number);
+void push(node * head, char* name, int number);
 player pop(node ** head);
 player removeNode(node ** head, int n);
 void insertNodeAt(node * head, int index, player player);
