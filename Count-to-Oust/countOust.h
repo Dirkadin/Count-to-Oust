@@ -20,18 +20,18 @@ node* createGameCircle(char *playersFile, int numOfPlayers);
 void traverseFwd(node* head, int elimCount, int numOfPlayers);
 
 //Inserts a new player at the specified position in the list, starting from the head
-void insertAt(void);
+//void insertAt(void);
 
 //Remove a player from the list while still keeping the list's links intact
 //void remove(player);
 
 //Traverses backward in the list starting from the current player
-void traverseBwd(node*);
+void traverseBwd(node* head, int elimCount, int numOfPlayers);
 
 //Prints out all of the names and numsers in a list, 10 per line
 void traverseList(node*, int);
 
 //Starts the game?
-void startGame(void);
+//void startGame(void);
 
 #endif /* countOust_h */

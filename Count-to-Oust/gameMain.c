@@ -63,7 +63,7 @@ int main(int argc, const char * argv[]) {
 	if (direction == 0) {
 		traverseFwd(head, elimCount, numOfPlayers);
 	} else {
-		traverseBwd(head);
+		traverseBwd(head, elimCount, numOfPlayers);
 	}
 	
 	

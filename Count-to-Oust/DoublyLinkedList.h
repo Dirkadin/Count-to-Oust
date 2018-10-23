@@ -27,8 +27,8 @@ typedef struct node {
 
 void push(node * head, char* name, int number);
 player pop(node ** head);
-player removeNode(node ** head, int n);
+player removeNode(node ** head, int index);
 void insertNodeAt(node * head, int index, player player);
-node* newNode(char name[100], int number);
+node* newNode(char* name, int number);
 
 #endif /* SinglyLinkedList_h */

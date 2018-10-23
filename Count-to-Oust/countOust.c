@@ -53,5 +53,13 @@ void traverseList(node* head, int numOfPlayers) {
 }
 
 void traverseFwd(node* head, int elimCount, int numOfPlayers) {
+//	node * current;
+//	current = head;
+//	
+//	for (int i = 0; i < elimCount; i++) {
+//		current = current->next;
+//	}
+//	
+//	printf("fuck c");
 	
 }
