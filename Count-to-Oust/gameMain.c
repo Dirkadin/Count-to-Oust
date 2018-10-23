@@ -61,9 +61,20 @@ int main(int argc, const char * argv[]) {
 	printf("Starting the game.\n");
 	
 	if (direction == 0) {
-		traverseFwd(head, elimCount, numOfPlayers);
+		while (numOfPlayers > 0) {
+			if (numOfPlayers < elimCount) {
+				printf("There are multiple winners!");
+				break;
+			}
+			traverseFwd(head, elimCount, numOfPlayers);
+			for (int i = 0; i < elimCount - 1; i++) {
+				head = head->next;
+			}
+			numOfPlayers--;
+		}
+		
 	} else {
-		traverseBwd(head, elimCount, numOfPlayers);
+//		traverseBwd(head, elimCount, numOfPlayers);
 	}
 	
 	

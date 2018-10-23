@@ -52,14 +52,15 @@ void traverseList(node* head, int numOfPlayers) {
 		}
 }
 
-void traverseFwd(node* head, int elimCount, int numOfPlayers) {
-//	node * current;
-//	current = head;
-//	
-//	for (int i = 0; i < elimCount; i++) {
-//		current = current->next;
-//	}
-//	
-//	printf("fuck c");
+player traverseFwd(node* head, int elimCount, int numOfPlayers) {
 	
+	player removed = removeNode(&head, elimCount - 1);
+	
+	for (int i = 0; i < elimCount - 1; i++) {
+		head = head->next;
+	}
+	
+	printf("\n\nPlayer %s was ELIMINIATED.  Btw they had a %d on their shirt.\n\n", removed.name, removed.number);
+	
+	return removed;
 }

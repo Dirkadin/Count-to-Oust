@@ -34,7 +34,7 @@ player pop(node ** head) {
 	
 	next_node = (*head)->next;
 	retval = (*head)->player;
-	free(*head);
+//	free(*head);
 	*head = next_node;
 	
 	return retval;
