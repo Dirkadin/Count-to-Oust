@@ -41,7 +41,6 @@ void traverseList(node* head, int numOfPlayers) {
 	node* current;
 	current = head;
 	
-	while (current->next != NULL) {
 		for (i = 0; i < numOfPlayers; i++) {
 			if (i % 10 == 0 && i > 0) {
 				printf("\n");
@@ -51,5 +50,8 @@ void traverseList(node* head, int numOfPlayers) {
 			
 			current = current->next;
 		}
-	}
+}
+
+void traverseFwd(node* head, int elimCount, int numOfPlayers) {
+	
 }
