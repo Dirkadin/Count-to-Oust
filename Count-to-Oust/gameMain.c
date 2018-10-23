@@ -36,7 +36,38 @@ int main(int argc, const char * argv[]) {
 	numOfPlayers = i/2;
 	
 	node * head = createGameCircle(str, numOfPlayers);
+	
+	node * current = head;
+	
+	for (int i = 0; i < numOfPlayers - 1; i++) {
+		current = current->next;
+	}
+	
+	head->previous = current;
+	current->next = head;
+	
+	//We have a circle
+	
 	traverseList(head, numOfPlayers);
+	
+	int elimCount = 0;
+	int direction = 0;
+	printf("\nPlease enter the elimination count: ");
+	scanf("%d", &elimCount);
+	
+	printf("\n Forwards: 0 or Backwards: 1?");
+	scanf("%d", &direction);
+	
+	printf("Starting the game.\n");
+	
+	if (direction == 0) {
+		traverseFwd(head, elimCount, numOfPlayers);
+	} else {
+		traverseBwd(head);
+	}
+	
+	
+	
 	
 	
 //	free(head->next);
